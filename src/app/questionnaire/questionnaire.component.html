@@ -1,0 +1,196 @@
+<html>
+    <body>
+      <div class="bod">
+         <div class="container">
+         
+                 
+                 
+                   
+        </div>        
+       </div>
+      <div class="form-style-10">
+      <h1>ÉVALUEZ VOS RISQUES</h1>
+      <form #f="ngForm" (ngSubmit)="onSave()" novalidate>
+   
+          <div class="section"><span>1</span>Quel est votre Sexe ?</div>
+          <div class="inner-wrap">
+          
+             <input type="radio" value="1" name="sexe" [(ngModel)]="sexe" #se='ngModel' required > Homme
+            <br>
+             <input type="radio" value="0" name="sexe" [(ngModel)]="sexe" #se='ngModel' required> Femme<br>
+             <small class="text-danger" [class.d-none]="type.valid || type.untouched">Ce champs est obligatoire</small>
+           
+          </div>
+          
+         
+            <div class="section"><span>2</span>Quel est votre age ?</div>
+            <div class="inner-wrap">    
+              <input  type="number" (keypress)="numericOnly($event)" placeholder="age" name="age" [(ngModel)]="age" #ag='ngModel' required><br>
+              <small class="text-danger " [class.d-none]="ag.valid || ag.untouched">Ce champs est obligatoire</small>
+            </div>
+
+
+         
+            <div class="section"><span>3</span>Vous souffrez de quel type de douleur de poitrine ? 
+            </div>
+      
+            <div class="hint" style="float: right;"><img class="img-reponsive" style="width: 30px;" src="../assets/images/lamp.png">
+              <span class="hinttext">L'angine de poitrine est une douleur thoracique survenant le plus souvent à la suite d’un effort ou d’un stress intense. 
+              
+             </span>
+            </div><br>
+            <div class="inner-wrap">    
+               
+                <div class="hint"> 
+                  <input type="radio" value="0" name="cp" [(ngModel)]="cp"> 0 : pour angine de poitrine typique<br>
+                  <span class="hinttext">Se produit pendant les périodes de stress ou d'activité en raison d'une diminution de l'apport sanguin au cœur. La douleur se propage aux épaules , au cou ,et la mâchoire  et dure de 3 a 15 min .
+                  </span>
+                  </div><br>
+              
+                  <div class="hint">
+                  <input type="radio" value="1" name="cp" [(ngModel)]="cp"> 1 : angine atypique   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     <br>
+                  <span class="hinttext">Vous sentez une douleur piquante et aigue qui dure des minutes , heures ou même une journée et génère une fatigue , étourdissements , problème de respiration , perturbations de sommeil et un rythme cardiaque augmenté. Il apparait aléatoirement sans cause.
+                </span>
+               </div><br>
+              
+               <div class="hint">
+                  <input type="radio"  value="2" name="cp" [(ngModel)]="cp"> 2 : douleur non angineuse  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  <br>
+                  <span class="hinttext">Elle sa durée est supérieure a 30 minutes ou inferieure a 5 secondes , peut être provoquée par un seul mouvement du tronc ou du bras, peut être provoquée par une pression locale des doigts ou se pencher en avant , ou il peut être soulagé immédiatement en se couchant
+                </span>
+              </div><br>
+              
+                  <input type="radio"  value="3" name="cp" [(ngModel)]="cp"> 3 : asymptotique<br>
+
+                  <small class="text-danger" [class.d-none]="type.valid || type.untouched">Ce champs est obligatoire</small>
+               
+          </div>
+
+
+          <div class="section"><span>4</span>Quelle est votre tension artérielle en mmHg?</div>
+          <div class="inner-wrap">    
+            <input  type="number" (keypress)="numericOnly($event)" placeholder="Tension artérielle" name="trestbps" [(ngModel)]="trestbps" #trest="ngModel" required ><br>
+            <small class="text-danger " [class.d-none]="trest.valid || trest.untouched">Ce champs est obligatoire</small>
+          </div>
+
+
+          <div class="section"><span>5</span> Quel est votre taux de Cholesterol en mg/dl?</div>
+          <div class="hint" style="float: right;"><img class="img-reponsive" style="width: 30px;" src="../assets/images/lamp.png">
+            <span class="hinttext">Les analyses de sang vous permet de répondre aux questions suivantes.
+           </span>
+          </div>
+          <br>
+          <div class="inner-wrap">    
+            <input  type="number" (keypress)="numericOnly($event)" placeholder="Cholesterol" name="chol" [(ngModel)]="chol" #choles="ngModel" required><br>
+            <small class="text-danger " [class.d-none]="choles.valid || choles.untouched">Ce champs est obligatoire</small>
+          </div>
+
+
+          <div class="section"><span>6</span>Votre valeur de glycémie du sang a jeun ?</div>
+
+         
+          <br>
+          <div class="inner-wrap">    
+             
+                 <input type="radio" value="0" name="fbs" [(ngModel)]="fbs"> 0 : si la glycémie a jeun > 120 mg/dl<br>
+              
+                  <input type="radio" value="1" name="fbs" [(ngModel)]="fbs"> 1 : Sinon<br>
+
+                  <small class="text-danger" [class.d-none]="type.valid || type.untouched">Ce champs est obligatoire</small>
+               
+          </div>
+          <div class="section"><span>7</span>Quel est votre status de thalassemia ?</div>
+
+         
+           <div class="inner-wrap">    
+               <input  type="radio" value=1 name="thal" [(ngModel)]="thal" #type='ngModel' required > 1 : normal<br>
+               <input  type="radio" value=2 name="thal" [(ngModel)]="thal" #type='ngModel'  required> 2 : defaut corrigé<br>
+               <input  type="radio" value=3 name="thal" [(ngModel)]="thal" #type='ngModel'  required> 3 : défaut réversible
+              <small class="text-danger" [class.d-none]="type.valid || type.untouched">Ce champs est obligatoire</small>
+            </div>
+
+          
+            <div class="section"><span>8</span>l'electrocardiagramme au repos ?</div>
+
+            <div class="hint"  style="float: right;"><img class="img-reponsive" style="width: 30px;"  src="../assets/images/lamp.png">
+              <span class="hinttext">vous avez besoin du l’électrocardiogramme : <br>examen permettant d’enregistrer l’activité électrique du cœur, au fur et à mesure des battements cardiaques.
+             </span>
+            </div><br>
+            <div class="inner-wrap">    
+             
+                 <input type="radio" value="0" name="restecg" [(ngModel)]="restecg"> 0 : normal<br>
+           
+                  <input type="radio" value="1" name="restecg" [(ngModel)]="restecg"> 1 : onde ST-T anormale<br>
+            
+             
+                  <input type="radio" value="2" name="restecg" [(ngModel)]="restecg"> 2 : hypertrophie ventriculaire gauche<br>
+                  <small class="text-danger" [class.d-none]="type.valid || type.untouched">Ce champs est obligatoire</small>
+              
+            </div>
+
+
+            <div class="section"><span>9</span> Votre nombre de battements max du coeur en 1 minute?</div>
+            
+            <div class="inner-wrap">    
+              <input  type="number"  (keypress)="numericOnly($event)" placeholder="thalach" name="thalach" [(ngModel)]="thalach" #thala="ngModel" required><br>
+              <small class="text-danger " [class.d-none]="thala.valid || thala.untouched">Ce champs est obligatoire</small>
+            </div>
+            <div class="section"><span>10</span> La valeur de la depression du segment ST dans l'electrocardiagramme en mm : </div>
+           
+            <div class="inner-wrap">    
+              <input  type="number" (keypress)="numericOnly($event)" placeholder="oldpeak" name="oldpeak" [(ngModel)]="oldpeak" #old="ngModel" required ><br>
+              <small class="text-danger " [class.d-none]="old.valid || old.untouched">Ce champs est obligatoire</small>
+            </div>
+
+            
+            <div class="section"><span>11</span>Est ce que vous sentez une douleur de poitrine lors d'un exercice physique ?</div>
+            <div class="hint" style="float: right;"><img class="img-reponsive" style="width: 30px;"  src="../assets/images/lamp.png">
+              <span class="hinttext">
+                L'épreuve d'effort se réalise dans un local adapté (une structure de soins) à l'aide d'une bicyclette ergométrique ou d'un tapis roulant et d'un appareil électrocardiographique informatisé pour la bonne interprétation des tracés.
+             </span>
+            </div><br>
+            <div class="inner-wrap">    
+                 <input type="radio" value="0" name="exang" [(ngModel)]="exang"> 0 :  oui<br>
+                  <input type="radio" value="1" name="exang" [(ngModel)]="exang"> 1 : non<br>
+                  <small class="text-danger" [class.d-none]="type.valid || type.untouched">Ce champs est obligatoire</small>
+
+            </div>
+
+
+          
+
+          
+            <div class="section"><span>12</span>Quel est la pente du segment ST durant l'exercice physique ?</div>
+           
+            <div class="inner-wrap">    
+                 <input type="radio" value="0" name="slope" [(ngModel)]="slope"> 0 : ascendante<br>
+                  <input type="radio" value="1" name="slope" [(ngModel)]="slope"> 1 : plat<br>
+                  <input type="radio" value="2" name="slope" [(ngModel)]="slope"> 2 : descendate<br>
+                  <small class="text-danger" [class.d-none]="type.valid || type.untouched">Ce champs est obligatoire</small>
+
+             </div>
+
+
+            <div class="section"><span>13</span>Quel est le nombre de vaisseaux pricipaux colorés par fluoroscopie ?</div>
+            <div class="inner-wrap">  
+            <label class="radio-inline">
+               &nbsp; &nbsp;
+               <input  type="radio" value=0 name="ca" [(ngModel)]="ca" #type='ngModel' required > 0 &nbsp; &nbsp;
+               <input  type="radio" value=1 name="ca" [(ngModel)]="ca" #type='ngModel'  required> 1 &nbsp; &nbsp;
+               <input  type="radio" value=2 name="ca" [(ngModel)]="ca" #type='ngModel'  required> 2 &nbsp; &nbsp;
+               <input type="radio" value=3 name="ca" [(ngModel)]="ca">  3
+              <small class="text-danger" [class.d-none]="type.valid || type.untouched">Ce champs est obligatoire</small>
+    
+           </label>
+           </div>
+      
+         
+
+         <button [disabled]="f.invalid"  type="submit"  class="btn">Valider</button>
+ 
+      </form>
+      </div>
+   
+      
+      </body>
+      </html>   
+

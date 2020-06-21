@@ -1,0 +1,116 @@
+
+
+@font-face {
+	font-family: "Montserrat";
+	src: url('/assets/font/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+	font-family: "Montserrat-ExtraBold";
+	src: url('/assets/font/Montserrat/Montserrat-ExtraBold.ttf');
+}
+
+img {
+	width: 60%
+}
+.hsf-container{
+	width: 100%;
+	padding: 200px 100px 100px 100px
+}
+
+.col-sm-4{
+	 padding-right: 30px;
+	text-align: center
+}
+.row{
+	width: 90%
+}
+
+ul .col{
+  width: 30%
+}
+
+ul .row{
+	width: 80%
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: rgba(255,153,153); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+header{
+	margin-bottom: 100px
+}
+
+li p{
+	font-size: 14pt
+}
+
+h3{
+	font-weight: bold;
+	margin-top: 20px;
+	font-size: 18pt
+}
+
+p{  
+	padding-top: 15px;
+	padding-bottom: 30px;
+	font-size: 17pt
+}
+
+span{
+	color: black
+}
+
+header p{
+	padding-top: 37px
+}
+h2{
+	font-family: "Montserrat-ExtraBold";
+	font-size: 50pt;
+}
+
+ol li{
+	list-style: decimal;
+	color: rgba(255,153,153);
+	
+}
+
+ol{ 
+	padding-left:40px;
+}
+
+li{
+	font-size: 15pt;
+	list-style: none;
+}
+
+hr{
+	border-width: 1px;
+	border-color: rgb(169,169,169);
+}
+.grey-section{
+ background-color: rgb(239,239,239);
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+ }
+
+h1{
+	color: rgba(255,153,135);
+ 	
+	font-family: "Montserrat-ExtraBold";
+	text-align: center;
+	
+	font-size: 65px;
+ }

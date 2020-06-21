@@ -1,0 +1,28 @@
+.bod{
+    background-image: url('src/assets/images/site.jpg');
+    height: 100vh;
+    
+    background-size: cover;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+   /* background-attachment: inherit;*/
+     overflow: scroll;
+   
+}
+
+
+@media (max-width:640px){
+.feature{
+       margin-top: 70px;
+      margin-left: -700px;
+    }
+.bod{
+    background-image:linear-gradient(rgba(253, 251, 252, 0.87),rgba(255, 255, 255, 0.788)) ,url('/src/éassets/images/site.jpg');
+    transition:.8s;
+
+}
+
+
+}

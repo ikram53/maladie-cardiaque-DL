@@ -1,0 +1,41 @@
+
+@font-face {
+	font-family: "adobe-garamond-italic";
+	src: url('/assets/font/Adobe Garamond Pro Italic.ttf');
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url('/assets/font/Montserrat/Montserrat-Regular.ttf');
+}
+
+
+/*.banner{
+   max-width: 540px;
+  
+      
+     margin-top:125px;
+     margin-left: 750px;
+
+   }*/
+   
+   .btn{
+      background-color:#F67678;
+      border-radius: 6px;
+      margin-top: 17px;
+      color:#FFF
+   }
+
+.quote{
+ font-family: "adobe-garamond-italic";
+ font-size: 25pt;
+ font-weight: bolder;
+}
+
+.test{
+font-family: "Montserrat";
+font-size: 13pt;
+}
+
+
+
